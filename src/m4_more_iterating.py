@@ -538,7 +538,7 @@ def count_positive_sines(numbers):
       :type sequence: list or tuple (of numbers)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     total = 0
@@ -550,7 +550,7 @@ def count_positive_sines(numbers):
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # DONE: 8. Implement this TEST function.
     #   It TESTS the  sum_first_n  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests.
     #
@@ -621,6 +621,19 @@ def run_test_sum_first_n():
 
     # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
 
+    # Test 8:
+    expected = 10
+    actual = sum_first_n([7, -5, 8, 15], 3)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 9:
+    expected = 18
+    actual = sum_first_n([18, 12, -6, 4, -10, 22, 17], 5)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
 
 def sum_first_n(numbers, n):
     """
@@ -644,7 +657,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
@@ -653,7 +666,10 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # ------------------------------------------------------------------
-
+    sum = 0
+    for k in range(n):
+        sum = sum + numbers[k]
+    return sum
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
